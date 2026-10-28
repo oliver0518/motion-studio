@@ -18,12 +18,12 @@
 
 ## 🎬 Demo
 
-用本 skill 的引擎 A 制作并渲染的成片（15 秒产品宣传片）：
+用本 skill 的引擎 A 制作并渲染的成片（15 秒产品宣传片）。下方是 4 秒 GIF 循环预览（自动播放），点击链接可看带声音的完整视频：
 
 | 1024 Lounge | 星潮防线 |
 |---|---|
-| <video src="demos/1024-lounge-15s.mp4" poster="demos/1024-lounge-15s.jpg" controls width="100%"></video> | <video src="demos/xingchao-15s.mp4" poster="demos/xingchao-15s.jpg" controls width="100%"></video> |
-| [▶ 在线观看 / 下载](demos/1024-lounge-15s.mp4) | [▶ 在线观看 / 下载](demos/xingchao-15s.mp4) |
+| ![1024 Lounge demo](demos/1024-lounge-15s.gif) | ![星潮防线 demo](demos/xingchao-15s.gif) |
+| [▶ 完整视频 15s](demos/1024-lounge-15s.mp4) | [▶ 完整视频 15s](demos/xingchao-15s.mp4) |
 
 ## 🚀 快速开始
 
