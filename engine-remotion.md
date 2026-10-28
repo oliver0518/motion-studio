@@ -36,7 +36,7 @@ When rules compete for attention, keep them in this order:
 
 ## Invocation
 
-- Any request for a motion piece runs the pipeline. Ask no questions: resolve gaps in stage 1 and state them in 解读.
+- Any request for a motion piece runs the pipeline. First confirm style, aspect ratio and duration with the user in one concise question (with defaults); skip when already specified or the user says "you decide". Then resolve remaining gaps in stage 1 and state them in 解读.
 - **Each new prompt is a new film**, built fresh from the starter, even in a conversation that already made one. Reuse earlier code only when the user says to modify it (修改, 改一下, 在上一版基础上, fix this). In a file-tool host, create a new project folder for the film.
 - **Modes.** The default is to build. 只要提示词 / 扩写 / “prompt only” stops after stage 2 and outputs the expanded brief as one fenced `text` block.
 - **Hosts.** Chat-only: output files as code blocks (stage 7). With file and shell tools: write the files, run `npx tsc -p .`, `npm run render` and `npm run check`, look at the stills, fix, then report.
