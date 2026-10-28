@@ -25,4 +25,4 @@
 
 ## 致谢
 
-本 skill 融合自 op7418 的 guizang-product-video-skill 与 motion-design-prompt-generator，并借鉴若干开源项目的范式（见 `BORROWINGS.md`）。各部分的版权与来源声明保留在各自目录的 `NOTICE.md` / `SOURCE.md` / `provenance.json` 中。
+本 skill 融合自 op7418 的 guizang-product-video-skill 与 motion-design-prompt-generator。各部分的版权与来源声明保留在各自目录的 `NOTICE.md` / `SOURCE.md` / `provenance.json` 中。

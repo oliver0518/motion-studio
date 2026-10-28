@@ -2,7 +2,7 @@
 
 防止"模板化/占位/空泛"的硬约束与自查清单。
 
-> 来源：融合 guizang 的"不套模板"+ motion-design 的反 slop 清单 + 调研的四道击穿门。
+> 来源：融合 guizang 的"不套模板"+ motion-design 的反 slop 清单。
 
 ## 反 slop 清单（逐条自查）
 

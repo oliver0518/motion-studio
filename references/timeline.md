@@ -2,7 +2,7 @@
 
 把契约变成"第几秒发生什么"的完整时间轴，再写代码。
 
-> 来源：融合 guizang 的镜头表 + motion-design 的 Stage 3（场景行/事件 t 表/T 块）；audio-first 时序 SSOT 与 rate-function 错峰借鉴 HyperFrames / Manim。
+> 来源：融合 guizang 的镜头表 + motion-design 的 Stage 3（场景行/事件 t 表/T 块）。
 
 ## 产出物
 
@@ -26,13 +26,13 @@
 | generator / 编排（顺序推进） | A（GSAP 时间轴） | 手工编排、逐镜头顺序推进 |
 | audio-first 游标（外部实测时长驱动全片） | 两者 | 有配音/口播，TTS 重测后自动重定时 |
 
-**audio-first 时序 SSOT**（借鉴 HyperFrames/调研）：TTS 逐句实测时长 → 推总帧数 → 运动层以"父持绝对时间、子为 beat 窗口"实现配音重测后全片自动重定时、零手工对轨。任何需要人工对轨的时间轴都是回归。
+**audio-first 时序 SSOT**：TTS 逐句实测时长 → 推总帧数 → 运动层以"父持绝对时间、子为 beat 窗口"实现配音重测后全片自动重定时、零手工对轨。任何需要人工对轨的时间轴都是回归。
 
-## 错峰编排（借鉴 Manim rate function + lag_ratio）
+## 错峰编排
 
 - 每个动画用 **rate function**（缓动族）+ **lag_ratio**（错峰系数）组合：`入场 = EASE.out + lag 0.05s`。
-- 一批同类元素入场用错峰而非同时：`sequence(0.15, ...元素)` 或 Manim 的 `lag_ratio`。
-- 内容哈希缓存（Manim）：确定性渲染才有资格缓存，帧函数稳定即可复用已渲染段。
+- 一批同类元素入场用错峰而非同时：`sequence(0.15, ...元素)` 或错峰系数。
+- 内容哈希缓存：确定性渲染才有资格缓存，帧函数稳定即可复用已渲染段。
 
 ## 引擎落地
 

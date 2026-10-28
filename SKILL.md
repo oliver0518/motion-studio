@@ -71,10 +71,6 @@ description: 代码驱动的影片工作室，一个 skill 覆盖两类片——
 - **隔离工程。** 源码适配、展示依赖、构建配置放视频工程，不动原产品代码。
 - **授权与来源。** 素材留来源与许可；引擎 A 默认样式受 BSL 约束（见 `COMMERCIAL_LICENSING.md`）。
 
-## 借鉴来源
-
-本 skill 融合两个上游 skill 各取所长，并借鉴 GitHub 开源项目的范式（不引入休眠/非 Web 依赖）。完整映射见 `BORROWINGS.md`。
-
 ## 工具入口
 
 ```sh
@@ -93,4 +89,3 @@ npm install && npm run studio   # 预览；npm run render 出片；npm run check
 - [元素 playbook](references/element-playbooks.md) · [反 slop](references/anti-slop.md)
 - [声音](references/sound.md) · [审片](references/review.md) · [交付](references/delivery.md)
 - [引擎 A：真实组件](engine-real-component.md) · [引擎 B：Remotion](engine-remotion.md)
-- [借鉴地图](BORROWINGS.md)

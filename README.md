@@ -4,7 +4,7 @@
 
 - **引擎 A · 真实组件**：用真实业务组件讲真实功能（产品宣传片 / 版本更新片 / changelog）。来自 `guizang-product-video-skill`。
 - **引擎 B · Remotion**：把提示词/主题做成动效短片（品牌片 / showreel / 数据故事 / MV / 角色片 …）。来自 `motion-design-prompt-generator`。
-- **共享层**：定方向 → 设计契约 → 时间轴 → 反 slop → 声音 → 审片 → 交付。两引擎通用，并借鉴 GitHub 开源范式。
+- **共享层**：定方向 → 设计契约 → 时间轴 → 反 slop → 声音 → 审片 → 交付。两引擎通用。
 
 ## 为什么这样合并
 
@@ -15,7 +15,6 @@
 | guizang（真实组件） | 真实功能/组件/设计语言、三方向选一、专属手法推导、混音让位、封面、`check_delivery` 交付 | 缺"把风格写成具体值"的设计契约、元素 playbook、评审门 → 由 motion-design 补 |
 | motion-design（Remotion） | 设计契约方法论、元素 playbook、S/X/E 三账本、真实变换/身份持续、Design Jury、反 slop | 缺"真实性"（真组件/真功能/封面交付）→ 由 guizang 的真实组件引擎补 |
 
-再叠加 GitHub 开源范式的借鉴（HyperFrames 的 audio-first 时序、html-video 的多引擎适配、video-shotcraft 的镜头 recipe、Revideo 的批量渲染、Manim 的 rate function / 错峰编排），见 [BORROWINGS.md](BORROWINGS.md)。
 
 ## 目录结构
 
@@ -23,7 +22,6 @@
 motion-studio/
 ├── SKILL.md                  # 路由 + 共享流程（skill 入口）
 ├── README.md                 # 本说明
-├── BORROWINGS.md             # 借鉴地图（来源 + 引用）
 ├── engine-real-component.md  # 引擎 A 完整说明书（原文逐字）
 ├── engine-remotion.md        # 引擎 B 完整说明书（原文逐字）
 ├── REFERENCE.md              # Remotion helper API 源码（原文）
@@ -65,4 +63,3 @@ ln -s "$(pwd)/motion-studio" ~/.dsh/skills/motion-studio
 
 - 本 skill 是 `guizang-product-video-skill`（AGPL-3.0）与 `motion-design-prompt-generator` 的派生合并，整体受 AGPL-3.0 约束（见 `LICENSE`）。
 - 引擎 A 的默认样式资产（`assets/fallback/`）受 BSL 约束，商用见 `COMMERCIAL_LICENSING.md`。
-- 借鉴的开源项目均为**范式借鉴**，不引入其代码；各自许可见 [BORROWINGS.md](BORROWINGS.md)。

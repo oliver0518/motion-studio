@@ -16,11 +16,11 @@
 
 3:4 / 4:3 / 16:9 三比例布局、选图、文案、导出（引擎 A `assets/starter/cover.mjs`）。用户没提封面就一句话问。无单独封面时 X/Threads 抓首帧当缩略图，所以前 5–10 帧要放完整画面。
 
-## 量产（batch，借鉴 Revideo）
+## 量产（batch）
 
 - 引擎 A：`plan.json` 驱动单工程复现；多版本片用同一工程换 `scope`/fixture。
-- 引擎 B：Remotion props 批量渲染——同一 composition 换 props 渲染 N 个版本（等价 Revideo 的 `renderVideo({variables})`）。
-- 如需服务端 API/webhook 自动化，用引擎 B 的 `renderMedia` 包一层（Revideo 范式，不引库）。
+- 引擎 B：Remotion props 批量渲染——同一 composition 换 props 渲染 N 个版本。
+- 如需服务端 API/webhook 自动化，用引擎 B 的 `renderMedia` 包一层。
 
 ## 交付产物
 

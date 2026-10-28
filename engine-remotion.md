@@ -1,10 +1,10 @@
-> 引擎 B 完整说明书 · 原文来自 motion-design-prompt-generator，逐字保留；文中相对路径按本 skill 根目录解析。
+> 引擎 B 完整说明书 · 原文来自 motion-design-prompt-generator（模型名已中性化）；文中相对路径按本 skill 根目录解析。
 
-# Opus-parity motion films (Remotion)
+# Reference-quality motion films (Remotion)
 
-**Goal:** the same prompt, given to Opus 5.5 and to the model running this skill, gives films that look, move and sound almost the same, whatever the subject or style.
+**Goal:** the same prompt, given to a top-tier model and to the model running this skill, gives films that look, move and sound almost the same, whatever the subject or style.
 
-The gap is rarely taste. It is behaviour. Opus:
+The gap is rarely taste. It is behaviour. A top-tier model:
 - honours every value in a long prompt;
 - turns vague words into concrete design decisions;
 - designs every element properly instead of settling for a placeholder;
@@ -42,7 +42,7 @@ When rules compete for attention, keep them in this order:
 - **Hosts.** Chat-only: output files as code blocks (stage 7). With file and shell tools: write the files, run `npx tsc -p .`, `npm run render` and `npm run check`, look at the stills, fix, then report.
 - If the message contains no idea, reply only: “请给我一句话的创意或一段完整的提示词。”
 
-## Stage 0 — Read the prompt like Opus: three ledgers
+## Stage 0 — Read the prompt like a top-tier model: three ledgers
 
 - **Spec ledger** `S01…`: one row per value or instruction, quoted exactly. This covers durations, sizes, colours, fonts, weights, copy, counts, angles, positions, timings, easing, bans, the loop or ending, characters, and every storyboard beat. `FILM` in `spec.ts` (duration, fps, size) comes from these rows; the starter's placeholder values must never survive. A truncated prompt is completed in the voice and density of its last full section, with those rows marked `S##*`.
 - **Transformation ledger** `X01…`: every becoming verb (becomes, turns into, gathers, dissolves, unfolds, grows into, 变成, 化成, 收拢, 汇聚, 展开) as `source → target · mechanism · start–end s · what is conserved`.
@@ -60,11 +60,11 @@ Every value is binding: never round, rename, recolour, re-time or drop one. The 
 - builders live in `film.tsx`, tagged `// E03`;
 - beats live in scene files, tagged `// S31 X02`.
 
-## Stage 1 — Fill gaps the way Opus does
+## Stage 1 — Fill gaps the way a top-tier model does
 
 Only for what the prompt leaves open; never override a ledger row.
 
-| Gap | Opus-like default |
+| Gap | Top-tier default |
 | --- | --- |
 | Format | 1920 × 1080; 60 fps for dense motion, 30 fps for calm or character pieces. A stated format is binding; for a quick look use `npm run preview`, never lower `FILM` |
 | Duration and ending | 15 s for an idea, 30 s for a showreel or brand film. A seamless loop for reels and idents; a resolved final image or end card for stories and promos |
@@ -114,7 +114,7 @@ Seeds in `design-systems/`:
 | `riso-halftone` | Indie, retro, playful |
 | `storybook-scene` | Characters, stories, MVs |
 
-**Short prompts:** write the full brief first, at Opus density. It has a direction paragraph, the contract, the structure (tempo, named scenes, scene changes), characters if any, and a scene-by-scene storyboard with timestamps and numbers. That brief becomes the ledgers. In prompt-only mode, output it and stop.
+**Short prompts:** write the full brief first, at full density. It has a direction paragraph, the contract, the structure (tempo, named scenes, scene changes), characters if any, and a scene-by-scene storyboard with timestamps and numbers. That brief becomes the ledgers. In prompt-only mode, output it and stop.
 
 ## Stage 3 — Timeline before code
 
